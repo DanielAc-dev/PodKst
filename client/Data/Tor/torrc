@@ -1,0 +1,4 @@
+DataDirectory C:\wamp64\www\cursos-mean2\client\Data\Tor
+HiddenServiceDir C:\wamp64\www\cursos-mean2\client\Data\HiddenService
+HiddenServicePort 80 127.0.0.1:4200
+SocksPort 9050

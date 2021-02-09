@@ -1,0 +1,46 @@
+# Tor state file last generated on 2020-08-01 01:29:11 local time
+# Other times below are in UTC
+# You *do not* need to edit this file.
+
+CircuitBuildTimeBin 625 6
+CircuitBuildTimeBin 675 28
+CircuitBuildTimeBin 725 14
+CircuitBuildTimeBin 775 8
+CircuitBuildTimeBin 825 8
+CircuitBuildTimeBin 875 8
+CircuitBuildTimeBin 925 7
+CircuitBuildTimeBin 975 3
+CircuitBuildTimeBin 1025 4
+CircuitBuildTimeBin 1075 5
+CircuitBuildTimeBin 1175 4
+CircuitBuildTimeBin 1225 5
+CircuitBuildTimeBin 1275 2
+CircuitBuildTimeBin 1325 6
+CircuitBuildTimeBin 1425 1
+CircuitBuildTimeBin 1475 2
+CircuitBuildTimeBin 1975 2
+Dormant 0
+Guard in=default rsa_id=9A9BC34468AC1677782E4E56B27D947A9C991E2E nickname=jmarshall3 sampled_on=2020-07-27T07:15:45 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=33925888F5DB4CD014E5718CB3B1FC82BFE1AD37 nickname=JdMtOrReLaY3 sampled_on=2020-07-24T00:34:17 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=09A70E396DE93F54D4541BBB0EC8E2B23761F34F nickname=Deepsky sampled_on=2020-07-31T12:15:17 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=76D2EBA82BBCCA3DF9F254A9A8372A10A26F3D14 nickname=pinselohrkatze00 sampled_on=2020-07-31T07:35:24 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=60F2139EA3E06410A05CBD6E8254E60A9063AD9D nickname=Tor sampled_on=2020-07-25T00:06:40 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=AF1C02D6BF9827BB956F09C454C28B431B1EFFE7 nickname=ballers2 sampled_on=2020-07-29T05:21:54 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=454BE75256A4A5EC2B7FE2EB2E1C62F2736AB175 nickname=Dumbletor sampled_on=2020-07-28T17:47:29 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=A1B7C1F83E5DA4376FD2E1DBA7AC28A71AB332AD nickname=arnall sampled_on=2020-07-31T14:28:50 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=1BB98B6F6EBCB616D0BD9485EA4B6FA7A7501D74 nickname=ggggg2 sampled_on=2020-07-22T21:28:03 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=5DB9AE27A44EB7B476CC04A66C67A71C97A001E6 nickname=Chenjesu sampled_on=2020-07-27T11:54:50 sampled_by=0.4.3.6 listed=1 confirmed_on=2020-07-26T01:48:23 confirmed_idx=0 pb_use_attempts=22.000000 pb_use_successes=22.000000 pb_circ_attempts=114.000000 pb_circ_successes=112.000000 pb_successful_circuits_closed=112.000000 pb_timeouts=2.000000
+Guard in=default rsa_id=D598E2865164AF6D9958FC9A37D825C283A80C3B nickname=Enflurane sampled_on=2020-07-23T08:01:49 sampled_by=0.4.3.6 listed=1 confirmed_on=2020-07-25T06:00:18 confirmed_idx=2
+Guard in=default rsa_id=0122A605B7C170D6086143448273D9A9844B69E2 nickname=Unnamed sampled_on=2020-07-23T16:41:23 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=2BA2C8E96B2590E1072AECE2BDB5C48921BF8510 nickname=storm sampled_on=2020-07-24T02:57:12 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=9AB93B5422149E5DFF4BE6A3814E2F6D9648DB6A nickname=atomcats sampled_on=2020-07-24T13:47:09 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=0F52E9652F96AD1D500AC062350A149902C128B9 nickname=partain sampled_on=2020-07-25T11:27:59 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=B76A047C20D3E4F9B5A64428298DA55A90D62472 nickname=DuesseldorfTor01 sampled_on=2020-07-24T17:39:31 sampled_by=0.4.3.6 listed=1 confirmed_on=2020-07-27T20:00:08 confirmed_idx=1
+Guard in=default rsa_id=5047962E97AFDC89C9B9EE98322F3E4CB7BEB639 nickname=muffi sampled_on=2020-07-29T15:23:02 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=CCF28BC8FB26C8C172DEE741702056914D2849BD nickname=scator sampled_on=2020-07-24T02:35:38 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=4CA64E677ECFF23B138CFE70A6A02E94BDF3A805 nickname=grumpytechie1 sampled_on=2020-07-21T20:14:12 sampled_by=0.4.3.6 listed=1
+Guard in=default rsa_id=D002C061F56CB6FE6FF7A27747EC2A7369ABBA9A nickname=nikomo sampled_on=2020-07-30T05:08:52 sampled_by=0.4.3.6 listed=1
+LastWritten 2020-08-01 06:29:11
+MinutesSinceUserActivity 3
+TorVersion Tor 0.4.3.6 (git-30711296fd5b7f51)
+TotalBuildTimes 113
