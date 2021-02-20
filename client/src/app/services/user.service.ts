@@ -31,7 +31,6 @@ export class UserService{
     register(user_to_register){
 
         let json = JSON.stringify(user_to_register);
-        let params = json;
         let header = new Headers({'Content-Type':'application/json'});
 
         return this._http.post(this.url+'register', params, {headers: header})
