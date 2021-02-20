@@ -78,7 +78,7 @@
     <div class="alert alert-info" *ngIf="alertRegister">
       {{alertRegister}}
     </div>
-    <form #resgisterForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col-md-7">
+    <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col-md-7">
       <p>
         <label>Nombre: </label>
         <input type="text" #name="ngModel" name="name" [(ngModel)]="user_register.name" class="form-control" required>
