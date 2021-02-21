@@ -32,7 +32,14 @@
               <p>El email es obligatorio</p>
             </samp>
           </p>
-    
+          <div class="image_for_edit" *ngIf="user.image && user.image !== 'null'">
+            <img src="" alt="">
+          </div>
+
+          <p>
+            <label for="">Sube tu foto</label>
+            <input type="file" placeholder="Subir imagen...">
+          </p>
           <input type="Submit" value="Actualizar" class="btn btn-primary">
         </form>
       </div>
