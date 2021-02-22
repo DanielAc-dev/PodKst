@@ -116,7 +116,7 @@ function uploadImage(req, res){
         var ext_split = file_name.split('\.');
         var file_ext = ext_split[1];
 
-        if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif' ){
+        if(file_ext == 'png' ||file_ext == 'PNG' || file_ext == 'jpg' || file_ext == 'gif' ){
 
             User.findByIdAndUpdate(userId, {image: file_name}, (err, userUpdated) => {
                 if(!userUpdated){
