@@ -21,7 +21,7 @@ function saveUser(req,res){
     user.name = params.name;
     user.surname = params.surname;
     user.email = params.email;
-    user.role = 'Role_Admin';
+    user.role = 'Role_User'; // El lo tiene en mayusculas. pero yo lo he configurado en Min_Mayus. (No afecta)
     user.image = 'null';
 
     if(params.password){
