@@ -12,7 +12,7 @@
         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         Buscar
       </a>
-      <a href="#">
+      <a [routerLink]="['/artists', 1]">
         <span class="glyphicon glyphicon-start" aria-hidden="true"></span>
         Artista
       </a>
@@ -40,13 +40,11 @@
     </nav>
     
   </div>
-  <div *ngIf="identity" class="center col-lg-6">
+  <div [class.hidden]="!identity" class="center col-lg-6">
     
     <router-outlet></router-outlet>
   </div>
 </div>
-
-
 
 <!--LOGIN si no esta logeado que se identifique.-->
 <div class="row" *ngIf="!identity">
