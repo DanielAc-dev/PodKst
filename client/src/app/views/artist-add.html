@@ -1,0 +1,23 @@
+<h1>
+    {{titulo}}
+</h1>
+
+<div class="col-lg-6">
+    <form #formArtist="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Nombre</label>
+            <input type="text" #name="ngModel" name="name" [(ngModel)]="artist.name" required class="form-control">
+            <span *ngIf="!name.valid && name.touched"> El nombre no es valido</span>
+
+        </p>
+
+        <p>
+            <label>Descripción</label>
+            <textarea #description="ngModel" name="description" [(ngModel)]="artist.description" required class="form-control"></textarea>
+            <span *ngIf="!description.valid && description.touched"> La descripcion no es valida</span>
+
+        </p>
+
+        <input type="submit" value = "{{titulo}}" [disabled]="!formArtist.form.valid" class="btn btn-success">
+    </form>
+</div>
