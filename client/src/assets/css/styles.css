@@ -4,6 +4,7 @@ html, body{
     background: #eee;
 }
 .row{
+    margin: auto;
     height: 100%;
 }
 
@@ -34,7 +35,7 @@ html, body{
     text-decoration: none;
 }
 .navigation a:hover{
-    color: white;
+    color: #84BD00;
 }
 #user_logged{
     text-decoration: center;
@@ -59,4 +60,5 @@ html, body{
 
 .logout{
     cursor: pointer;
+    margin-bottom: 15%;
 }
