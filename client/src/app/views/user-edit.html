@@ -1,40 +1,37 @@
-<!--formulario-->
-<div class="col-lg-6">
+<div class="col-lg6" *ngIf="identity">
     <h1>{{titulo}}</h1>
-
-    <div *ngIf="alertMessage">
-      <div class="alert alert-info" >
+    <!--formulario-->
+    <div class="col">
+        <h1>{{titulo}}</h1>
+        <div class="alert alert-info" *ngIf="alertMessage">
           {{alertMessage}}
-      </div>
-    </div>
-
-    <form #userUpdateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-10">
+        </div>
+        <form #userUpdateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7">
           <p>
-            <label>Nombre:</label>
-            <input type="text" #name="ngModel" name="name" [(ngModel)]="user.name" class="form-control" required />
-            <span *ngIf="!name.valid && name.touched">
-              El Nombre es obligatorio
-            </span>
+            <label>Nombre: </label>
+            <input type="text" #name="ngModel" name="name" [(ngModel)]="user.name" class="form-control" required>
+            <samp class="alert-danger" *ngIf="!name.valid && name.touched">
+              <p>El Nombre es obligatorio</p>
+            </samp>
           </p>
     
           <p>
-            <label>Apellidos:</label>
+            <label>Apellidos: </label>
             <input type="text" #surname="ngModel" name="surname" [(ngModel)]="user.surname" class="form-control"
-              required />
-            <span *ngIf="!surname.valid && surname.touched">
-              Los apellidos son obligatorios
-            </span>
+              required>
+            <samp class="alert-danger" *ngIf="!surname.valid && surname.touched">
+              <p>Los apellidos son obligatorios</p>
+            </samp>
           </p>
     
           <p>
-            <label>Correo electronico:</label>
+            <label>Correo electronico: </label>
             <input type="email" #email="ngModel" name="email" [(ngModel)]="user.email" class="form-control"
-              required />
-            <span *ngIf="!email.valid && email.touched">
-              El email es obligatorio
-            </span>
+              required>
+            <samp class="alert-danger" *ngIf="!email.valid && email.touched">
+              <p>El email es obligatorio</p>
+            </samp>
           </p>
-
           <div class="image_for_edit" *ngIf="user.image && user.image !== 'null'">
             <img src="{{url + 'get-image-user/' + user.image}}" alt="foto de perfil" style="width: 50px;">
           </div>
@@ -43,6 +40,7 @@
             <label for="">Sube tu foto</label>
             <input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)">
           </p>
-          <input type="Submit" value="Actualizar" class="btn btn-primary" />
-    </form>
+          <input type="Submit" value="Actualizar" class="btn btn-primary">
+        </form>
+      </div>
 </div>
