@@ -45,7 +45,6 @@ export class UserEditComponent implements OnInit{
                     localStorage.setItem('identity', JSON.stringify(this.user));
                     document.getElementById("identity_name").innerHTML = this.user.name;
                     
-
                     if(!this.filesToUpload){
                         //redireccion
                     }else{
