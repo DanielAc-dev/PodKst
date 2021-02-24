@@ -3,6 +3,7 @@ import {Http, Response, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 import {GLOBAL } from './global';
+import {Artist} from '../models/artist';
 //import {map} from 'rxjs/operators';
 
 @Injectable ()
@@ -12,8 +13,8 @@ export class ArtistService{
     constructor(private _http: Http){
         this.url = GLOBAL.url;
     }
-    addArtist(token,Artist){
-        let params = JSON.stringify(Artist);
+    addArtist(token,artist:Artist){
+        let params = JSON.stringify(artist);
         let headers = new Headers({
             'Content-Type':'application/json',
             'Authorization':token

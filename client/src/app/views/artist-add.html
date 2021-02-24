@@ -1,8 +1,11 @@
-<h1>
-    {{titulo}}
-</h1>
-
 <div class="col-lg-6">
+    <h1>
+        {{titulo}}
+    </h1>
+    
+    <div class="alert alert-info" *ngIf="alertMessage">
+        {{alertMessage}}
+      </div>
     <form #formArtist="ngForm" (ngSubmit)="onSubmit()">
         <p>
             <label>Nombre</label>
