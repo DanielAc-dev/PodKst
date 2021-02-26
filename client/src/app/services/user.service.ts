@@ -39,7 +39,7 @@ export class UserService{
     }
 
 
-    update_User(user_to_update){ //Se agrego _
+    updateUser(user_to_update){ //Se elimino otra vez _
         let json = JSON.stringify(user_to_update);
         let params = json;
         let header = new Headers({
