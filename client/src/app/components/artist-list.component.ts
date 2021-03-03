@@ -1,10 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
+import { User } from 'app/models/user';
 
-import {GLOBAL} from '../services/global';
-import { UserService } from '../services/user.service';
-import {Artist} from '../models/artist';
-
+import { GLOBAL} from '../services/global';
+import { UserService} from '../services/user.service';
+import { Artist} from '../models/artist';
 
 @Component({
     selector: 'artist-list',
@@ -13,9 +13,9 @@ import {Artist} from '../models/artist';
 })
 
 export class ArtistListComponent implements OnInit{
-    public titulo: string;
-    public artist: Artist[];
-    public identity;
+    public titulo: string; 
+    public artists: Artist[];
+    public identity; 
     public token;
     public url: string;
 
@@ -27,13 +27,12 @@ export class ArtistListComponent implements OnInit{
         this.titulo = 'Artistas';
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();
-        this.url = GLOBAL.url;
+        this.url  = GLOBAL.url; 
     }
 
     ngOnInit(){
-        console.log('Artist-list.component.ts cargado');
+        console.log('artist-list.component.ts cargado');
 
-        // Conseguir el listado de artistas
+        //Conseguir el listado de artist
     }
-
 }
