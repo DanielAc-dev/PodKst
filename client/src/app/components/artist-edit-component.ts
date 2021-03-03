@@ -40,9 +40,36 @@ export class ArtistEditComponent implements OnInit{
         console.log('Artist-edit.component.ts cargado');
         //llamar al metodo del api para sacar un artista en base a su ID
         // Conseguir el listado de artistas
-        
+        this.getArtist();
     }
     
+    getArtist(){
+        this._route.params.forEach((params: Params) => {
+            let id = params['id'];
+
+            this._artistService.getArtist(this.token, id).subscribe(
+                response => {
+                    if(!response.artist){
+                        this._router.navigate(['/'])
+                    }else{
+                        this.artist = response.artist;
+                    }
+                },
+                error =>{
+                    var errorMessage = <any>error;
+                    
+                    if(errorMessage != null){
+                        var body = JSON.parse(error._body);
+                        //this.alertMessage = body.message;
+                        
+                        console.log(error);
+                    }
+                }
+
+            );
+        });
+    }
+
     onSubmit(){
         console.log(this.artist);
         this._artistService.addArtist(this.token, this.artist).subscribe(
