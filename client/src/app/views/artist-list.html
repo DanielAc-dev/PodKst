@@ -15,7 +15,7 @@
                 <img src="{{ url + 'get-image-artist/' + artist._image }}" style="width: 100px;" />
             </div>
             <div class="artist-name">
-                <a href="#">
+                <a [routerLink]="['/artista', artist._id]">
                     {{artist.name}}
                 </a>
                 <div class="buttons" *ngIf="identity.role == 'Role_Admin'">
