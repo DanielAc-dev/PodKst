@@ -39,7 +39,7 @@ export class ArtistEditComponent implements OnInit{
     }
 
     ngOnInit(){
-        console.log('Artist-edit.component.ts cargado');
+        console.log('artist-edit.component.ts cargado');
         //llamar al metodo del api para sacar un artista en base a su ID
         // Conseguir el listado de artistas
         this.getArtist();

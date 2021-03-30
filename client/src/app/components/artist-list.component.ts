@@ -94,7 +94,7 @@ export class ArtistListComponent implements OnInit{
                 if(!response.artist){
                     alert('Error en el servidor');
                 }
-                    this.artists = response.artists;
+                    this.getArtists();
             },
             error =>{
                 var errorMessage = <any>error;

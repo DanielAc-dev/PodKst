@@ -35,7 +35,7 @@ export class ArtistAddComponent implements OnInit{
     }
 
     ngOnInit(){
-        console.log('Artist-add.component.ts cargado');
+        console.log('artist-add.component.ts cargado');
 
         // Conseguir el listado de artistas
         

@@ -12,7 +12,7 @@
     <ul class="list-group list-group-horizontal artist-list" *ngIf="identity" >
         <li *ngFor="let artist of artists" class="list-group-item artist-item">
             <div class="artist-image">
-                <img src="{{ url + 'get-image-artist/' + artist._image }}" style="width: 100px;" />
+                <img src="{{ url + 'get-image-artist/' + artist._image }}"/>
             </div>
             <div class="artist-name">
                 <a [routerLink]="['/artista', artist._id]">

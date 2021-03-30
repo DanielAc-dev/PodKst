@@ -3,7 +3,6 @@ import { Router, ActivatedRoute, Params} from '@angular/router';
 
 import {GLOBAL} from '../services/global';
 import { UserService } from '../services/user.service';
-import { UploadService } from '../services/upload.service';
 import { ArtistService } from '../services/artist.service';
 import {Artist} from '../models/artist';
 

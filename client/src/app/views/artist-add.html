@@ -1,4 +1,4 @@
-<div class="col-lg-6">
+<div class="col-lg-6" *ngIF="identity && identity.role == 'Role_Admin'">
     <h1>
         {{titulo}}
     </h1>
@@ -23,7 +23,7 @@
 
         <div *ngIf="is_edit">
             <div class="artist_image_for_edit" *ngIf = "artist.image && artist.image != 'null'">
-                <img src="{{urlo + 'get-image-artist/' + artist.image" />
+                <img src="{{url + 'get-image-artist/' + artist.image" />
             </div>
             <p>
                 <label >Sube la imagen del artista</label>
@@ -34,4 +34,9 @@
 
         <input type="submit" value = "{{titulo}}" [disabled]="!formArtist.form.valid" class="btn btn-success" />
     </form>
+</div>
+
+<div class="col-lg-6" *ngIF="!identity || identity.role != 'Role_Admin'">
+    <h1>Error</h1>
+    <p>No tienes acceso a esta parte de la aplicación</p>
 </div>
