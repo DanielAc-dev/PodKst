@@ -23,14 +23,14 @@
             </span>
           </p>
     
-          <p>
+          <!--<p>
             <label>Correo electronico: </label>
             <input type="email" #email="ngModel" name="email" [(ngModel)]="user.email" class="form-control"
               required>
             <span class="alert-danger" *ngIf="!email.valid && email.touched">
               <p>El email es obligatorio</p>
             </span>
-          </p>
+          </p>-->
           <div class="image_for_edit" *ngIf="user.image && user.image !== 'null'">
             <img src="{{url + 'get-image-user/' + user.image}}" alt="foto de perfil" style="width: 50px;">
           </div>

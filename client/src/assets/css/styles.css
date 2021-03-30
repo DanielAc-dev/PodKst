@@ -18,6 +18,12 @@ html, body{
     overflow-y: scroll;
 }
 
+.seguro{
+    margin-top: -31px;
+    background: #222326;
+    position: absolute;
+}
+
 .head-title{
     font-size: 20px;
     font-weight: bold;
@@ -121,4 +127,5 @@ html, body{
 
 #artist-head-card .image img{
     height: 150px;
+
 }
