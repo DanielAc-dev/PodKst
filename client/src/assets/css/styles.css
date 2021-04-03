@@ -22,6 +22,7 @@ html, body{
     margin-top: -31px;
     background: #222326;
     position: absolute;
+    height: 40px;
 }
 
 .head-title{

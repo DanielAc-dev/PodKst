@@ -30,7 +30,7 @@ export class ArtistEditComponent implements OnInit{
         private _uploadService: UploadService,
         private _artistService: ArtistService
     ){
-        this.titulo = 'Crear nuevo artista';
+        this.titulo = 'Editar artista';
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();
         this.url = GLOBAL.url;
