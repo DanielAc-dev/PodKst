@@ -5,17 +5,20 @@ import {GLOBAL} from '../services/global';
 import { UserService } from '../services/user.service';
 import { ArtistService } from '../services/artist.service';
 import {Artist} from '../models/artist';
+import { AlbumService } from '../services/album.service';
+import {Album} from '../models/album';
 
 
 @Component({
     selector: 'artist-detail',
     templateUrl: '../views/artist-detail.html',
-    providers: [UserService, ArtistService]
+    providers: [UserService, ArtistService, AlbumService]
 })
 
 export class ArtistDetailComponent implements OnInit{
 
     public artist: Artist;
+    public albums: Album[];
     public identity;
     public token;
     public url: string;
@@ -25,7 +28,8 @@ export class ArtistDetailComponent implements OnInit{
         private _route: ActivatedRoute,
         private _router: Router,
         private _userService: UserService,
-        private _artistService: ArtistService
+        private _artistService: ArtistService,
+        private _albumService: AlbumService
     ){
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();
@@ -51,6 +55,26 @@ export class ArtistDetailComponent implements OnInit{
                         this.artist = response.artist;
 
                         //sacar los albums del artista
+                        this._albumService.getAlbums(this.token, response.artist._id).subscribe(
+                            
+                            response =>{
+                                if(!response.albums){
+                                    this.alertMessage = 'Este artista no tiene albums';
+                                }else{
+                                    this.albums = response.albums;
+                                }
+                            },
+                                error => {
+                                    var errorMessage = <any>error;
+
+                                    if(errorMessage != null){
+                                    var body = JSON.parse(error._body);
+                                    //this.alertMessage = body.message;
+                                    
+                                    console.log(error);
+                                }
+                            
+                            });
                     }
                 },
                 error =>{
