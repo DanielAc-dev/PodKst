@@ -15,7 +15,7 @@ import {Album} from '../models/album';
 
 export class AlbumDetailComponent implements OnInit{
 
-    public Albums: Album[];
+    public album: Album;
     public identity;
     public token;
     public url: string;
@@ -33,7 +33,7 @@ export class AlbumDetailComponent implements OnInit{
     }
 
     ngOnInit(){
-        console.log('Album-edit.component.ts cargado');
+        console.log('album-detail.component.ts cargado');
         // Sacar album fde la dbs
         this.getAlbum();
     }
@@ -49,7 +49,7 @@ export class AlbumDetailComponent implements OnInit{
                     if(!response.album){
                         this._router.navigate(['/']);
                     }else{
-                        this.album = response.album;
+                        this.album = response.album; 
                         /*
                         //sacar los albums del artista
                         this._albumService.getAlbums(this.token, response.artist._id).subscribe(
