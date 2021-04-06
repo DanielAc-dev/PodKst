@@ -91,4 +91,35 @@ export class ArtistDetailComponent implements OnInit{
             );
         });
     }
+
+    public confirmado;
+    onDeleteConfirm(id){
+        this.confirmado = id;
+    }
+
+    onCancelAlbum(){
+        this.confirmado == null;
+    }
+
+    onDoleteAlbum(id){
+        this._albumService.deleteAlbum(this.token, id).subscribe(
+            response =>{
+                if(!response.album){
+                    alert('Error en el servidor');
+                }else{
+                    this.getArtist();
+                }
+            }
+            ,error =>{
+                var errorMessage = <any>error;
+                
+                if(errorMessage != null){
+                    var body = JSON.parse(error._body);
+                    //this.alertMessage = body.message;
+                    
+                    console.log(error);
+                }
+            }
+        );
+    }
 }

@@ -1,7 +1,7 @@
 <div *ngIf="artist" class="artist-box">
     <div id="artist-head-card">
         <div class="image">
-            <img src="{{ url + 'get-image-artist/' + artist._image }}" *ngIf="artist.image && artist.image !== 'null'" />
+            <img src="{{ url + 'get-image-artist/' + artist.image }}" *ngIf="artist.image && artist.image !== 'null'" />
         </div>
         <div class="data">
             <h1>{{artist.name}}</h1>
