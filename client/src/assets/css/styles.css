@@ -26,6 +26,11 @@ html, body{
     height: 40px;
 }
 
+.seguro-album{
+    margin-top: -41px;
+    margin-left: 10px;
+}
+
 /*BARRA LATERAL*/
 .head-title{
     font-size: 20px;
