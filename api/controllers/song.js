@@ -120,7 +120,7 @@ function uploadFile(req, res){
         var ext_split = file_name.split('\.');
         var file_ext = ext_split[1];
 
-        if(file_ext == 'mp3' || file_ext == 'ogg' ){
+        if(file_ext == 'mp3' ||file_ext == 'wav' || file_ext == 'ogg' ){
 
             Song.findByIdAndUpdate(songId, {file: file_name}, (err, songUpdated) => {
                 if(!songUpdated){
