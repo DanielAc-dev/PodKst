@@ -15,9 +15,15 @@ export class PlayerComponent implements OnInit{
 
     constructor(){
         this.url = GLOBAL.url;
-        this.song = new Song(1,"","","","");
     }
     ngOnInit(){
         console.log('player cargando');
+       
+        var song = JSON.parse(localStorage.getItem('sound_song'));
+        if(song){
+            this.song = song;
+        }else{
+            this.song = new Song(1,"","","","");
+        }
     }
 }

@@ -1,6 +1,6 @@
 <div class='album-image'> 
     <span *ngIf='song.album'> 
-        <img if='play-image-añbum' src="{{url + 'get-image-album/' +song.album.image}}" /> 
+        <img id='play-image-album' src="{{url + 'get-image-album/' +song.album.image}}" /> 
     </span> 
     <span *ngIf='!song.album'> 
         <img id='play-image-album' src='assets/images/default.jpg'>
@@ -11,7 +11,7 @@
     <span id='play-song-title'> 
         {{song.name}} 
     </span> <span id='play-song-artist'>
-        <span *ngIf='song.artist'>
+        <span *ngIf='song.album.artist'>
             {{song.album.artist.name}}
         </span>
     </span> 
