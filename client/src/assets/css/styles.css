@@ -170,16 +170,16 @@ html, body{
 
 .song-item{
     list-style: none;
-    border-image: 1px solid #444;
-    padding-top: 3px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 7px;
 }
 
 .song-item .tittle{
-    padding: 12px;;
+    padding: 12px;
 }
 
 .song-item .buttons{
-    float: right
+    float: right;
 }
 
 .song-item .btn-success{
