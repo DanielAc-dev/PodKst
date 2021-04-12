@@ -196,6 +196,7 @@ html, body{
     padding: 20px;
     margin-left: -15px;
     border-left: 1px solid #444;
+    color: gray;
 }
 
 .player .album-image{
