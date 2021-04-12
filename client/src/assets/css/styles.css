@@ -157,6 +157,11 @@ html, body{
 .album-item{
     height: 357px;
 }
+.album-item .album-name{
+    color: white;
+    padding: 10px;
+    background-color: #222326;
+}
 
 .album-item .album-image img{
     width: 100%;

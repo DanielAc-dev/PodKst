@@ -123,7 +123,8 @@ export class AlbumDetailComponent implements OnInit{
             }
         );
     }
-    startPlayer(song){
+
+ startPlayer(song){
         let song_player = JSON.stringify(song);
         let file_path = this.url + 'get-song-file/' + song.file;
         let image_path = this.url + 'get-image-album/' + song.album.image;
