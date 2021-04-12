@@ -25,15 +25,24 @@
 
                     {{song.number + '. '+ song.name+ ' - '+ song.duration}}
 
-                    <p>
+                    <div class="buttons" *ngIf="identity && identity.role == 'Role_Admin'">
                         <a [routerLink]="['/editar-tema', song._id]" class="btn btn-warning">
                             Editar
                         </a>
 
-                        <a [routerLink]="['/editar-tema', song._id]" class="btn btn-danger">
+                        <a (click)="onDeleteConfirm(song._id)" class="btn btn-danger">
                             Borrar
                         </a>
-                    </p>
+                    </div>
+
+                    <div class="seguro seguro-song" *ngIf="confirmado == song._id">
+                        <a (click)="onDeleteSong(song._id)" class="btn btn-danger">
+                            Eliminar
+                        </a>
+                        <a (click)="onCancelSong()" class="btn btn-primary">
+                            Cancelar
+                        </a>
+                    </div>
                 </div>
             </li>
         </ul>
