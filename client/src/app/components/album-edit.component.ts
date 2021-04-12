@@ -19,6 +19,7 @@ import {Album} from '../models/album';
 export class AlbumEditComponent implements OnInit{
     public titulo: string;
     public album: Album;
+    public artist: Artist;
     public identity;
     public token;
     public url: string;
@@ -45,6 +46,7 @@ export class AlbumEditComponent implements OnInit{
 
         //Conseguir el album
         this.getAlbum();
+        console.log(this.album);
     }
 
     getAlbum(){
@@ -78,9 +80,10 @@ export class AlbumEditComponent implements OnInit{
             
             this._albumService.editAlbum(this.token,id, this.album).subscribe(
                 response => {
-
-                    if(!response.album){
+                    
+                    if(response.album){
                         this.alertMessage = 'Error en el servidor';
+                        console.log(this.album);
                     }else{
                         this.alertMessage = 'El album se ha actualizado correctamente';
                         if(!this.filesToUpload){

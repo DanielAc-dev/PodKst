@@ -101,7 +101,7 @@ export class ArtistDetailComponent implements OnInit{
         this.confirmado == null;
     }
 
-    onDoleteAlbum(id){
+    onDeleteAlbum(id){
         this._albumService.deleteAlbum(this.token, id).subscribe(
             response =>{
                 if(!response.album){
